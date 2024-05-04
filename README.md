@@ -1,7 +1,7 @@
 # PotionEffectsRemover
 Minecraft plugin to disable some potion effects.
 
-Support **Paper** forks including **Folia** for version 1.20 to last. (See version compatibility in releases)
+Support **Paper** forks including **Folia** for version 1.20 to the last one. (See version compatibility in releases)
 Older version than 1.20 won't be supported.
 
 ## Install
