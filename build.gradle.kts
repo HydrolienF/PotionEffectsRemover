@@ -22,8 +22,7 @@ dependencies {
 }
 
 java {
-  // Configure the java toolchain. This allows gradle to auto-provision JDK 17 on systems that only have JDK 8 installed for example.
-  toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+  toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
 tasks {
@@ -41,14 +40,7 @@ tasks {
     assemble {
         dependsOn(shadowJar)
     }
-    compileJava {
-        options.encoding = Charsets.UTF_8.name() // We want UTF-8 for everything
-    }
-    javadoc {
-        options.encoding = Charsets.UTF_8.name() // We want UTF-8 for everything
-    }
     processResources {
-        filteringCharset = Charsets.UTF_8.name() // We want UTF-8 for everything
         val props = mapOf(
             "name" to project.name,
             "version" to project.version,
