@@ -5,7 +5,7 @@ plugins {
 }
 
 group="fr.formiko.potioneffectsremover"
-version="1.0.0"
+version="1.0.1"
 description="Disable some potion effects."
 
 repositories {
