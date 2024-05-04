@@ -27,7 +27,7 @@ Then you need an 1.20 Minecraft server with PaperMc or a fork to run it.
 
 Edit `plugins/PotionEffectsRemover/config.yml`.
 
-The only needed setting is `disabledPotionEffects`that determine witch potion effects will be disabled.
+The only needed setting is `disabledPotionEffects` that determine witch potion effects will be disabled.
 
 You can optionaly define some bypass, so player will ba able to have disabled potion effects.
 Bypass can be a gamemode, for example all player in creative can have disabled potion effects.
