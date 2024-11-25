@@ -6,7 +6,7 @@
 [ ![download][] ][downloadLink]
 [ ![discord-shield][] ][discord-invite]
 
-[**Discord**](discord-invite) | [**Hangar**](https://hangar.papermc.io/Hydrolien/PotionEffectsRemover) | [**Spigot**](https://www.spigotmc.org/resources/potioneffectsremover.116610/) | [**GitHub**](https://github.com/Hydrolien/PotionEffectsRemover)
+[**Discord**](https://discord.gg/RPNbtRSFqG) | [**Hangar**](https://hangar.papermc.io/Hydrolien/PotionEffectsRemover) | [**Spigot**](https://www.spigotmc.org/resources/potioneffectsremover.116610/) | [**GitHub**](https://github.com/HydrolienF/PotionEffectsRemover)
 
 # PotionEffectsRemover
 Minecraft plugin to disable some potion effects.
