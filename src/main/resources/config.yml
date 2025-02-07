@@ -1,7 +1,7 @@
 debug: false
 
 # Potions effects to disable
-# A list of string as define here https://jd.papermc.io/folia/1.20/org/bukkit/potion/PotionEffectType.html
+# A list of string as define here https://jd.papermc.io/paper/1.21.4/org/bukkit/potion/PotionEffectType.html
 # Examples:
 # In compact format:
 # disabledPotionEffects: ["ABSORPTION", "BLINDNESS"]
@@ -13,14 +13,15 @@ debug: false
 disabledPotionEffects: []
 
 # Bypass game mode
-# A list of string as define here https://jd.papermc.io/folia/1.20/org/bukkit/GameMode.html
+# A list of string as define here https://jd.papermc.io/paper/1.21.4/org/bukkit/GameMode.html
 # If a player is on one of the game mode in this list, he will not be affected by the plugin.
 bypassGameModes: []
 
 # Bypass cause
-# A list of string as define here https://jd.papermc.io/paper/1.17/org/bukkit/event/entity/EntityPotionEffectEvent.Cause.html
+# A list of string as define here https://jd.papermc.io/paper/1.21.4/org/bukkit/event/entity/EntityPotionEffectEvent.Cause.html
 # If a player is affected by a potion effect with one of the cause in this list, he will not be affected by the plugin.
 bypassCauses: []
 
-# If true it affect only the players, else it affect all entities
+# If true: disabled potion effects will only be disabled on players.
+# Else it will be disabled on all entities.
 affectOnlyPlayers: false

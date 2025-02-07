@@ -6,8 +6,11 @@ plugins {
 }
 
 group="fr.formiko.potioneffectsremover"
-version="1.0.2"
+version="1.0.3"
 description="Disable some potion effects."
+
+val mainMinecraftVersion = "1.21.4"
+val supportedMinecraftVersions = "1.20 - 1.21.4"
 
 repositories {
     mavenCentral()
@@ -17,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion-R0.1-SNAPSHOT")
     implementation("org.bstats:bstats-bukkit:3.1.0")
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
 }
@@ -59,12 +62,24 @@ tasks {
         // Configure the Minecraft version for our task.
         // This is the only required configuration besides applying the plugin.
         // Your plugin's jar (or shadowJar if present) will be used automatically.
-        minecraftVersion("1.21.3")
+        minecraftVersion(mainMinecraftVersion)
     }
 }
 
 publishing {
     publications.create<MavenPublication>("maven") {
         from(components["java"])
+    }
+}
+
+tasks.register("echoVersion") {
+    doLast {
+        println("${project.version}")
+    }
+}
+
+tasks.register("echoReleaseName") {
+    doLast {
+        println("${project.version} [${supportedMinecraftVersions}]")
     }
 }
