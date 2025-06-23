@@ -1,3 +1,6 @@
+# 1.0.4
+Support from 1.20 to 1.21.6.
+
 # 1.0.3
 
 Explicitly support 1.21.4.
