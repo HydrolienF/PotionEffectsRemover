@@ -8,7 +8,7 @@ plugins {
 }
 
 group="fr.formiko.potioneffectsremover"
-version="1.0.7"
+version="1.0.8"
 description="Disable some potion effects."
 
 val mainMinecraftVersion = "1.21.10"
