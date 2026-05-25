@@ -1,3 +1,6 @@
+# 1.0.10
+Support from 1.20 to 26.1.2.
+
 # 1.0.9
 Support from 1.20 to 1.21.11.
 
