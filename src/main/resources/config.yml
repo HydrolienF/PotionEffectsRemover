@@ -9,7 +9,7 @@ debug: false
 # disabledPotionEffects:
 # - ABSORPTION
 # - BLINDNESS
-
+# Also work with Minecraft key formating: `BREATH_OF_THE_NAUTILUS` = `minecraft:breath_of_the_nautilus`
 disabledPotionEffects: []
 
 # Bypass game mode

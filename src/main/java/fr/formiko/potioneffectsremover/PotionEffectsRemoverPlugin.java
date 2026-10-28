@@ -1,6 +1,8 @@
 package fr.formiko.potioneffectsremover;
 
+import co.aikar.commands.PaperCommandManager;
 import java.util.Collection;
+import java.util.Locale;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.GameMode;
 import org.bukkit.NamespacedKey;
@@ -8,7 +10,6 @@ import org.bukkit.Registry;
 import org.bukkit.event.entity.EntityPotionEffectEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffectType;
-import co.aikar.commands.PaperCommandManager;
 
 public class PotionEffectsRemoverPlugin extends JavaPlugin {
     private Collection<PotionEffectType> disabledPotionEffects;
@@ -32,7 +33,7 @@ public class PotionEffectsRemoverPlugin extends JavaPlugin {
     public void reloadConfig() {
         super.reloadConfig();
         disabledPotionEffects = getConfig().getStringList("disabledPotionEffects").stream()
-                .map(dpe -> Registry.POTION_EFFECT_TYPE.get(NamespacedKey.minecraft(dpe.toLowerCase()))).toList();
+                .map(dpe -> Registry.POTION_EFFECT_TYPE.get(NamespacedKey.fromString(normalizePattern(dpe)))).toList();
         bypassGameModes = getConfig().getStringList("bypassGameModes").stream().map(GameMode::valueOf).toList();
         bypassCauses = getConfig().getStringList("bypassCauses").stream().map(EntityPotionEffectEvent.Cause::valueOf).toList();
     }
@@ -44,5 +45,10 @@ public class PotionEffectsRemoverPlugin extends JavaPlugin {
     public static void log(String message) {
         if (getInstance().getConfig().getBoolean("debug", false))
             getInstance().getLogger().info(message);
+    }
+
+    public static String normalizePattern(String pattern) {
+        String normalized = pattern.toLowerCase(Locale.ROOT);
+        return normalized.contains(":") ? normalized : "minecraft:" + normalized;
     }
 }
