@@ -1,3 +1,6 @@
+# 1.0.12
+Support from 1.20 to 26.3.
+
 # 1.0.11
 Support from 1.20 to 26.2.
 

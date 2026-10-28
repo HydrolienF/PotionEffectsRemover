@@ -3,17 +3,17 @@ plugins {
     id("com.gradleup.shadow") version "9.4.1"
     `maven-publish` // Add ./gradlew publishToMavenLocal
     id("org.sonarqube") version "7.3.0.8198" // Advanced code quality checks
-    id("xyz.jpenilla.run-paper") version "3.0.2" // Paper server for testing/hotloading JVM
+    id("xyz.jpenilla.run-paper") version "3.1.0" // Paper server for testing/hotloading JVM
     id("io.papermc.hangar-publish-plugin") version "0.1.4"
     id("com.modrinth.minotaur") version "2.+" // cf https://github.com/modrinth/minotaur
 }
 
 group="fr.formiko.potioneffectsremover"
-version="1.0.11"
+version="1.0.12"
 description="Disable some potion effects."
 
 val mainMinecraftVersion = "1.21.11" // 26.1.2
-val supportedMinecraftVersions = "1.20 - 26.2"
+val supportedMinecraftVersions = "1.20 - 26.3"
 
 repositories {
     mavenCentral()
@@ -195,7 +195,8 @@ fun expandMinecraftVersions(range: String): List<String> {
         "1.20" to 6,
         "1.21" to 11,
         "26.1" to 2,
-        "26.2" to 0
+        "26.2" to 0,
+        "26.3" to 0
     )
 
     data class Version(
